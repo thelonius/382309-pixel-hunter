@@ -1,7 +1,7 @@
 # Личный проект «Пиксель хантер» [![Build status][travis-image]][travis-url]
 
 * Студент: [Eduard Dubnitsky](https://up.htmlacademy.ru/ecmascript/5/user/382309).
-* Наставник: `Неизвестно`.
+* Наставник: [Denis Korneychuk](https://htmlacademy.ru/profile/id70618).
 
 ---
 
