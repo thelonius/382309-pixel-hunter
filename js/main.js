@@ -22,26 +22,39 @@ const arrowNavStr = `<div class="arrows__wrap">
 </div>`;
 arrowNav.innerHTML = arrowNavStr;
 console.log(arrowNav);
-
+console.log(domElements.length);
 // const right = arrowNav.querySelector('arrows__btn');
 const showScreen = (i) => {
-  mainCentral.innerHTML = domElements[i].innerHTML;
+  if (0 < i < domElements.length) {
+    mainCentral.innerHTML = domElements[i].innerHTML;
+  } else {
+    console.log('there is no page like that');
+  }
 }
 const nextScreen = () => {
-  currentScreen ++;
-  showScreen(currentScreen);
+  if (currentScreen != 7) {
+    currentScreen ++;
+    showScreen(currentScreen);
+    console.log(currentScreen);
+  } else {
+    console.log('there is no page like that');
+  }
 }
 const prevScreen = () => {
-  currentScreen --;
-  showScreen(currentScreen);
+  if (currentScreen != 0) {
+    currentScreen --;
+    showScreen(currentScreen);
+    console.log(currentScreen);
+  } else {
+    console.log('there is no page like that');
+  }
 }
 const switchScreen = (key) => {
   if (key.keyCode == '37') {
-    currentScreen --;
-    showScreen(currentScreen);
+    prevScreen();
+    console.log(currentScreen);
   } else if (key.keyCode == '39') {
-      currentScreen ++;
-      showScreen(currentScreen);
+      nextScreen();
     }
   }
 const right = arrowNav.querySelector('button:nth-child(3)');
