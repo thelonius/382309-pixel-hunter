@@ -14,7 +14,7 @@ const imagemin = require(`gulp-imagemin`);
 const rollup = require(`gulp-better-rollup`);
 const sourcemaps = require(`gulp-sourcemaps`);
 const mocha = require(`gulp-mocha`);
-const commojs = require(`rollup-plugin-commonjs`);
+const commonjs = require(`rollup-plugin-commonjs`);
 
 gulp.task(`test`, function () {
   return gulp
@@ -118,6 +118,6 @@ gulp.task(`assemble`, [`clean`], () => {
 gulp.task(`build`, [`assemble`], () => {
   gulp.start(`imagemin`);
 });
-
-gulp.task(`test`, () => {
-});
+// 
+// gulp.task(`test`, () => {
+// });
