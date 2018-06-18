@@ -3,28 +3,6 @@ import {assert, expect} from 'chai';
 import {countGamePoints, pointsCount} from '../modules/countGamePoints';
 const userLivesLeft = 2;
 const nominalAnswersQuantity = 10;
-// const userAnswersArrayShorter = [
-//   {
-//     isCorrect: false,
-//     time: 33
-//   },
-//   {
-//     isCorrect: true,
-//     time: 81
-//   },
-//   {
-//     isCorrect: false,
-//     time: 10
-//   },
-//   {
-//     isCorrect: true,
-//     time: 28
-//   },
-//   {
-//     isCorrect: false,
-//     time: 105
-//   }
-// ];
 const userAnswersArray = [
   {
     isCorrect: true,
@@ -77,12 +55,7 @@ describe(`testing userAnswersArray`, () => {
   it(`check if all answers are present`, () => {
     assert(userAnswersArray.length === nominalAnswersQuantity, `answer quantity is : ${userAnswersArray.length}`);
   });
-  // it(`return -1 if there's less than 10 answers user has done`, () => {
-  //   assert(countGamePoints(userAnswersArrayShorter, userLivesLeft) < 1000, `countGamePoints returns : ${pointsCount}`);
-  // });
   it(`mess around with cycling through array`, () => {
     assert(countGamePoints(userAnswersArray, userLivesLeft) === 1150, `countGamePoints returns : ${pointsCount}`);
   });
 });
-
-export default nominalAnswersQuantity;
